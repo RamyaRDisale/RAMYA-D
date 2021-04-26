@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>guess number</title>
+        <style>
+            .first{
+                height: 300px;
+                width: 500px;
+                background-color: rgb(125, 212, 228);
+                padding: 20px 20px 20px 20px;
+                margin-left: 150px;
+                 }
+
+            .tex{
+                font-size: xx-large;
+                font-family: sans-serif;
+            }
+
+            .box{
+                height: 50px;
+                width: 150px;
+                font-size: 25px;
+                background-color: rgb(85, 140, 243);
+            }
+            .button{
+                height: 80px;
+                width: 150px;
+                margin-left: 80px;
+                margin-top: 70px;
+                font-size: 30px;
+                background-color: rgb(51, 127, 228);
+
+            }
+
+            .pa{
+                font-size: xx-large;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="first">
+       <div class="tex"> Enter the number between 1 to 10 </div>
+        <input type="text" id="ip" class="box">
+        <button class="button" id="bt">submit</button>
+        <br>
+        <p id="par" class="pa">
+
+        </p>
+        </div>
+        <script type="text/javascript">
+        document.getElementById("bt").onclick=function(){
+        var com=Math.floor(Math.random()* 5);
+        var user=document.getElementById("ip").value;
+        document.getElementById("par").innerHTML="Generated Number is "+com;
+        if(com==user){
+            alert(" Correct Guess ");
+        }
+        else{
+            alert("Try Agian");
+        }
+
+        }
+        
+        </script>
+    </body>
+</html>
